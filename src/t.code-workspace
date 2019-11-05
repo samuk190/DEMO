@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": "E:\\RocketSeat\\Projetos\\NodeA\\Desafio01"
+		},
+		{
+			"path": "E:\\RocketSeat\\Projetos\\NodeA\\modulo01"
+		},
+		{
+			"path": "E:\\RocketSeat\\Projetos\\NodeA\\Flexbox"
+		},
+		{
+			"path": "E:\\RocketSeat\\Projetos\\NodeA\\gobarber"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Flexbox"
+	}
+}
