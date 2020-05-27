@@ -17,7 +17,7 @@ class AppointmentController {
       where: { user_id: req.userId, canceled_at: null },
       order: ['date'],
 
-      attributes: ['id', 'date'],
+      attributes: ['id', 'date', 'past', 'cancelable'],
       limit: 20,
       offset: (page - 1) * 20,
       include: [
@@ -133,7 +133,9 @@ class AppointmentController {
         error: 'You can only cancel appointments 2 hours in advance',
       });
     }
+
     appointment.canceled_at = new Date();
+
     await appointment.save();
     // backgrounds em segundo plano
     await Queue.add(CancellationMail.key, {
