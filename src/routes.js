@@ -18,6 +18,7 @@ const upload = multer(multerConfig);
 routes.post('/users', UserController.store);
 routes.post('/sessions', SessionController.store);
 routes.use(authMiddleware);
+routes.get('/', (req, res) => res.send('ok'));
 routes.put('/users', UserController.update);
 // single 1 arquivo por vez
 routes.post('/files', upload.single('file'), FileController.store);
