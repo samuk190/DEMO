@@ -1,6 +1,6 @@
 import User from '../models/User';
 import File from '../models/File';
-
+// esse provider é o prestador de serviços da RA VIGILANCIA
 class ProviderController {
   async index(req, res) {
     const providers = await User.findAll({

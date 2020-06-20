@@ -94,9 +94,13 @@ class AppointmentController {
     });
 
     // Notificar prestador de serviço // Notify Provider
-    const formattedDate = format(hourStart, "'dia' dd 'de' MMMM,'ás' H:mm'h'", {
-      locale: pt,
-    });
+    const formattedDate = format(
+      hourStart,
+      "'dia' dd 'de' MMMM,'ás' H:mm'h'",
+      {
+        locale: pt,
+      }
+    );
     const user = await User.findByPk(req.userId);
     await Notification.create({
       content: `Novo Agendamento de ${user.name} para ${formattedDate} `,
